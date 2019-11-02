@@ -14,14 +14,14 @@ window.addEventListener("load", function() {
                document.getElementById("pilotStatus") .innerHTML = "Pilot name required"
                validate = false;
             }  else {
-               document.getElementById("pilotStatus") .innerHTML = "Pilot ready"
+               document.getElementById("pilotStatus") .innerHTML = `Pilot ${inputName.value} ready`
             }
             let inputCoName = document.getElementsByName("copilotName")[0];
             if(inputCoName.value == "") {
                document.getElementById("copilotStatus") .innerHTML = "Co-Pilot name required"
                validate = false;
             }  else {
-               document.getElementById("copilotStatus") .innerHTML = "Co-Pilot ready"
+               document.getElementById("copilotStatus") .innerHTML = `Co-Pilot ${inputCoName.value} ready`
             }
             let inputFuel = document.getElementsByName("fuelLevel")[0];
             if(inputFuel.value == "") {
