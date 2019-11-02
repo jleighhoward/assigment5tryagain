@@ -15,16 +15,18 @@
                    fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
                    response.json().then( function(json) {
                    const div = document.getElementById("missionTarget");
+
                div.innerHTML = `
                      <h2>Mission Destination</h2>
+                     
                      <ol>
-                        <li>Name: ${"K2-18b"}</li>
-                        <li>Diameter: ${"34500 km"}</li>
-                        <li>Star: ${"K218"}</li>
-                        <li>Distance from Earth: ${"110 light years from Earth"}</li>
-                        <li>Number of Moons: ${"unknown"}</li>
+                        <li>Name: ${json[0].name}</li>
+                        <li>Diameter: ${json[0].diameter}</li>
+                        <li>Star: ${json[0].star}</li>
+                        <li>Distance from Earth: ${json[0].distance}</li>
+                        <li>Number of Moons: ${json[0].moons}</li>
+                        <img src = ${json[0].image}>
                      </ol>
-                     <img src= ${"https://www.nasa.gov/sites/default/files/thumbnails/image/heic1916a.jpg"}>
                     ` ;
                   });
                });
